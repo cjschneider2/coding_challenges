@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS=-O2 -Wall -Wextra
+CFLAGS=-O2 -Wall -Wextra -Werror
 #LIBS=-lm
 
 #CFLAGS=-O2 -Wall -Wextra -Werror
