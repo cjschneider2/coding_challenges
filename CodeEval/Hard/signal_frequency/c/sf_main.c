@@ -34,6 +34,11 @@ void fft( double complex* data_in)
 
 int main(int argc, const char * argv[]) {
 
+    if ( argc < 2 ) {
+        printf("%s", "Please give the input file as the first cmd argument ");
+        return EXIT_FAILURE;
+    }
+
     FILE* file = fopen(argv[1], "r");
     char* line = calloc(8192, sizeof(char));
 
@@ -55,7 +60,6 @@ int main(int argc, const char * argv[]) {
         for ( int i = 0; i < WS; i++){
             *(data + i) = (double)*(vals + i);
         }
-        //free(vals); /* as we're done with that array...*/
 
         /* begin the FFT procedure based on Cooley-Tukey */
         fft(data);
@@ -75,5 +79,6 @@ int main(int argc, const char * argv[]) {
         //free(data_out);
     }
     free(line);
-    return 0;
+    close(file);
+    return EXIT_SUCCESS;
 }
