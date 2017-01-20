@@ -4,13 +4,14 @@ pub fn read_line_as_vec_int() -> Vec<usize> {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("read_line failed");
     input.trim()
-         .split_whitespace()
-         .map(|i| i.parse().expect("parse failed"))
-         .collect()
+        .split_whitespace()
+        .map(|i| i.parse().expect("parse failed"))
+        .collect()
 }
 
-fn main () {
+fn main() {
     let size = *read_line_as_vec_int().get(0).unwrap();
+    staircase(size);
 }
 
 fn staircase(size: usize) {

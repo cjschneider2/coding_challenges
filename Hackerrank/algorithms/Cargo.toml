@@ -5,7 +5,8 @@ authors = ["C. Jeremiah Schneider <schneider@br-tech.de>"]
 
 [dependencies]
 
-#[[bin]]
-#name = "find_digits"
 [[bin]]
-name = "sherlock_squares"
+#name = "find_digits"
+#name = "sherlock_squares"
+#name = "coin_change"
+name = "journey_to_moon"
