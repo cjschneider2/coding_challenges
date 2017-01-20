@@ -1,0 +1,11 @@
+[package]
+name = "alg"
+version = "0.1.0"
+authors = ["C. Jeremiah Schneider <schneider@br-tech.de>"]
+
+[dependencies]
+
+#[[bin]]
+#name = "find_digits"
+[[bin]]
+name = "sherlock_squares"
